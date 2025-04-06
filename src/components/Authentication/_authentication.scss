@@ -1,0 +1,44 @@
+.authentication {
+  &-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+  }
+
+  &-form {
+    margin-top: 1rem;
+    width: 100%;
+
+    &-wrapper {
+      background-color: #666;
+      padding: 2.5rem 1.5rem;
+      border-radius: 5%;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    &-btns {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      button {
+        cursor: pointer;
+      }
+    }
+
+    .app-btn {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .authentication-form-wrapper {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}

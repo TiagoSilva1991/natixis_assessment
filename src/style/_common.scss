@@ -1,0 +1,163 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+$branding-primary-color: #681f7a;
+$branding-secondary-color: #fff;
+
+.app {
+  &-page {
+    display: flex;
+    flex-direction: column;
+    background: #333;
+    height: 100vh;
+  }
+
+  &-container {
+    width: 100%;
+    max-width: 1600px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+
+  &-header {
+    padding: 1rem;
+    background: $branding-primary-color;
+
+    &-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-user-wrapper {
+      position: relative;
+    }
+
+    &-user {
+      width: 200px;
+      background-color: #fff;
+      padding: 0.5rem;
+      position: absolute;
+      top: calc(100% + 0.5rem);
+      right: 0;
+
+      .app-btn {
+        width: 100%;
+      }
+    }
+  }
+
+  &-footer {
+    padding: 0.3rem;
+    background-color: $branding-primary-color;
+    text-align: center;
+
+    p,
+    a {
+      color: #fff;
+      font-size: 0.8rem;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    .footer-content-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &-content {
+    padding: 60px 0;
+    flex: 1;
+    overflow: auto;
+  }
+
+  &-title {
+    color: #fff;
+    font-size: 1.5rem;
+  }
+
+  &-btn {
+    border: 1px solid $branding-primary-color;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    background: $branding-primary-color;
+    transition: all 0.3s linear;
+    color: $branding-secondary-color;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover,
+    &.active {
+      background: $branding-secondary-color;
+      color: $branding-primary-color;
+    }
+
+    &.icon-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+  }
+
+  &-text-btn {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    background-color: transparent;
+    border: 0;
+    color: $branding-primary-color;
+    transition: all 0.3s linear;
+    display: inline-block;
+    cursor: pointer;
+
+    &:hover {
+      color: $branding-secondary-color;
+    }
+  }
+}
+
+input {
+  width: 100%;
+  border: 0;
+  padding: 0.5rem;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  background-color: transparent;
+  display: block;
+  font-size: 0.9rem;
+  padding: 0.8rem;
+
+  &::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #fff;
+  }
+
+  &::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #fff;
+  }
+
+  &:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #fff;
+  }
+
+  &:-moz-placeholder {
+    /* Firefox 18- */
+    color: #fff;
+  }
+}
+
+input+input {
+  margin-top: 1rem;
+}
+
+@media (min-width: 769px) {
+  .app-container {
+    padding: 0 30px;
+  }
+}
